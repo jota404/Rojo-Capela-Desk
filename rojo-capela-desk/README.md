@@ -1,16 +1,59 @@
-# React + Vite
+# Rojo Capela Desk 🎫
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web mínimo para registro, acompanhamento e gestão de chamados de suporte técnico, desenvolvido como parte do desafio **MiniDesk** do Curso Técnico em Informática (FEMA), aplicando práticas ágeis de Scrum, Kanban e XP.
 
-Currently, two official plugins are available:
+## 📋 Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O MiniDesk permite:
+- Cadastrar chamados de suporte
+- Consultar chamados existentes
+- Alterar o status de um chamado
+- Excluir chamados
 
-## React Compiler
+O desenvolvimento segue sprints simuladas em sala de aula, com entregas incrementais ao longo de 5 encontros, integração contínua via GitHub Actions e revisão de código por Pull Requests.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👥 Equipe
 
-## Expanding the ESLint configuration
+| Papel | Nome |
+|---|---|
+| Product Owner (PO) | Larissa |
+| Scrum Master (SM) | João |
+| Developer | Rogério |
+| Developer | Cássio |
+| Developer | Pedro |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologias
+
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- JavaScript
+- ESLint
+
+## 🚀 Como rodar o projeto
+
+```bash
+# Clonar o repositório
+git clone https://github.com/jota404/Rojo-Capela-Desk.git
+
+# Entrar na pasta do projeto
+cd Rojo-Capela-Desk
+
+# Instalar as dependências
+npm install
+
+# Rodar em modo de desenvolvimento
+npm run dev
+```
+
+O projeto vai subir por padrão em `http://localhost:5173`.
+
+## 📌 Gestão do projeto
+
+- **Repositório:** [github.com/jota404/Rojo-Capela-Desk](https://github.com/jota404/Rojo-Capela-Desk.git)
+- **Quadro Kanban:** [Acessar quadro](https://canva.link/p1gpishuyz7i0rw)
+
+O fluxo de trabalho segue o quadro Kanban com as colunas: **Backlog da Sprint → A Fazer → Em desenvolvimento → Em revisão → Em teste/CI → Concluído**, respeitando o limite de WIP definido pela equipe.
+
+## ✅ Status
+
+🚧 Em desenvolvimento — Aula 1 (Planejamento & Setup)
