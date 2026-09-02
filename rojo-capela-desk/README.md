@@ -33,10 +33,10 @@ O desenvolvimento segue sprints simuladas em sala de aula, com entregas incremen
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/jota404/Rojo-Capela-Desk.git
+git clone "https://github.com/jota404/Rojo-Capela-Desk.git"
 
 # Entrar na pasta do projeto
-cd Rojo-Capela-Desk
+cd rojo-capela-desk
 
 # Instalar as dependências
 npm install
