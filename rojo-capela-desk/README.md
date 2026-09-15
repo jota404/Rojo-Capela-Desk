@@ -1,59 +1,61 @@
-# Rojo Capela Desk 🎫
+# MiniDesk
 
-Sistema web mínimo para registro, acompanhamento e gestão de chamados de suporte técnico, desenvolvido como parte do desafio **MiniDesk** do Curso Técnico em Informática (FEMA), aplicando práticas ágeis de Scrum, Kanban e XP.
+[![CI - MiniDesk](https://github.com/jota404/Rojo-Capela-Desk/actions/workflows/ci.yml/badge.svg)](https://github.com/jota404/Rojo-Capela-Desk/actions/workflows/ci.yml)
 
-## 📋 Sobre o projeto
+Sistema web mínimo de chamados de suporte para um trabalho de faculdade.
 
-O MiniDesk permite:
-- Cadastrar chamados de suporte
-- Consultar chamados existentes
-- Alterar o status de um chamado
-- Excluir chamados
-
-O desenvolvimento segue sprints simuladas em sala de aula, com entregas incrementais ao longo de 5 encontros, integração contínua via GitHub Actions e revisão de código por Pull Requests.
-
-## 👥 Equipe
-
-| Papel | Nome |
-|---|---|
-| Product Owner (PO) | Larissa |
-| Scrum Master (SM) | João |
-| Developer | Rogério |
-| Developer | Cássio |
-| Developer | Pedro |
-
-## 🛠️ Tecnologias
-
-- [Vite](https://vitejs.dev/)
-- [React](https://react.dev/)
-- JavaScript
-- ESLint
-
-## 🚀 Como rodar o projeto
+## Instalação
 
 ```bash
-# Clonar o repositório
-git clone "https://github.com/jota404/Rojo-Capela-Desk.git"
-
-# Entrar na pasta do projeto
-cd rojo-capela-desk
-
-# Instalar as dependências
 npm install
-
-# Rodar em modo de desenvolvimento
-npm run dev
 ```
 
-O projeto vai subir por padrão em `http://localhost:5173`.
+## Como rodar
 
-## 📌 Gestão do projeto
+```bash
+npm start
+```
 
-- **Repositório:** [github.com/jota404/Rojo-Capela-Desk](https://github.com/jota404/Rojo-Capela-Desk.git)
-- **Quadro Kanban:** [Acessar quadro](https://canva.link/p1gpishuyz7i0rw)
+O servidor ficará disponível em `http://localhost:3000`.
 
-O fluxo de trabalho segue o quadro Kanban com as colunas: **Backlog da Sprint → A Fazer → Em desenvolvimento → Em revisão → Em teste/CI → Concluído**, respeitando o limite de WIP definido pela equipe.
+## Como testar
 
-## ✅ Status
+```bash
+npm test
+```
 
-🚧 Em desenvolvimento — Aula 1 (Planejamento & Setup)
+## Pipeline
+
+Em cada `push` ou pull request para a branch `main`, o GitHub Actions:
+
+1. Instala as dependências com `npm ci`.
+2. Executa os testes automatizados com `npm test`.
+3. Depois dos testes, inicia a aplicação e verifica o endpoint `/api/health`.
+
+## Deploy
+
+O deploy é feito no Render após um `push` na branch `main` e a aprovação do workflow de CI.
+
+1. No Render, crie um novo **Web Service** conectado ao repositório do MiniDesk.
+2. Configure o comando de build como `npm ci`.
+3. Configure o comando de start como `npm start`.
+4. Crie o serviço e abra as configurações dele no Render.
+5. Gere um **Deploy Hook** e copie a URL gerada.
+6. No GitHub, abra `Settings > Secrets and variables > Actions`.
+7. Crie o secret `RENDER_DEPLOY_HOOK` com a URL do Deploy Hook.
+
+Sem esse secret, o job de deploy é automaticamente ignorado sem falhar o pipeline.
+
+## Requisitos do trabalho
+
+- CRUD de chamados: cadastrar, consultar, alterar status e excluir.
+- Testes automatizados básicos.
+- Pipeline de CI/CD executada a cada alteração no repositório.
+
+## Stack
+
+- Node.js e Express.
+- SQLite com `better-sqlite3`.
+- HTML, CSS e JavaScript puro no front-end.
+- Jest e Supertest para testes.
+- GitHub Actions para CI/CD.
