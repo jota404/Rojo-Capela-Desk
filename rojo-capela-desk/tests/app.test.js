@@ -1,6 +1,6 @@
 const request = require('supertest');
-const app = require('../src/app');
-const db = require('../src/db');
+const app = require('../server/app');
+const db = require('../server/db');
 
 beforeEach(() => {
   db.prepare('DELETE FROM chamados').run();
