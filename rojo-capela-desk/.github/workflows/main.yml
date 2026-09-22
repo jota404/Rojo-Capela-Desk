@@ -1,30 +1,36 @@
-name: CI
+name: CI e Testes
 
 on:
-push:
-branches: [ main, quagmire77-patch-1 ]
-pull_request:
-branches: [ main ]
+  push:
+    branches: [ main, quagmire77-patch-1 ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-validate:
-runs-on: ubuntu-latest
-
-steps:
-  - name: Checkout do código
-    uses: actions/checkout@v4
+  build-and-test:
+    runs-on: ubuntu-latest
     
-  - name: Setup do Node.js
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
-      cache: npm
-      
-  - name: Instalar dependências
-    run: npm ci
+    # Isto avisa a pipeline que os comandos npm devem correr dentro da sub-pasta!
+    defaults:
+      run:
+        working-directory: ./rojo-capela-desk
     
-  - name: Executar testes automatizados
-    run: npm test
-    
-  - name: Realizar o Build (Frontend Vite)
-    run: npm run build
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+        
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ./rojo-capela-desk/package-lock.json
+          
+      - name: Instalar dependências
+        run: npm install
+        
+      - name: Rodar Testes
+        run: npm test
+        
+      - name: Compilar (Build)
+        run: npm run build
