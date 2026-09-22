@@ -4,7 +4,7 @@ export default function Header({ total = 0, pendentes = 0 }) {
   return (
     <header className="page-header">
       <div>
-        <p className="eyebrow">Central de suporte</p>
+        <p className="eyebrow">Central de suporteeeeeeeeeeeeeeeeee</p>
         <h1>MiniDesk</h1>
         <p className="subtitle">Acompanhe e resolva chamados com clareza.</p>
       </div>
