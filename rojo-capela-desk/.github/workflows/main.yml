@@ -10,11 +10,6 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     
-    # Isto avisa a pipeline que os comandos npm devem correr dentro da sub-pasta!
-    defaults:
-      run:
-        working-directory: ./rojo-capela-desk
-    
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
@@ -23,15 +18,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: ./rojo-capela-desk/package-lock.json
           
       - name: Instalar dependências
-        run: npm install
-        
+        run: |
+          cd rojo-capela-desk
+          npm install
+          
       - name: Rodar Testes
-        run: npm test
-        
+        run: |
+          cd rojo-capela-desk
+          npm test
+          
       - name: Compilar (Build)
-        run: npm run build
-        
+        run: |
+          cd rojo-capela-desk
+          npm run build
