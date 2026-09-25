@@ -1,0 +1,35 @@
+name: CI e Testes
+
+on:
+  push:
+    branches: [ main, quagmire77-patch-1 ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+        
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          
+      - name: Instalar dependências
+        run: |
+          cd rojo-capela-desk
+          npm install
+          
+      - name: Rodar Testes
+        run: |
+          cd rojo-capela-desk
+          npm test
+          
+      - name: Compilar (Build)
+        run: |
+          cd rojo-capela-desk
+          npm run build

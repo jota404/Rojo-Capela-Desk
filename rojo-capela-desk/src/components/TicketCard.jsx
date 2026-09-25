@@ -16,6 +16,11 @@ export default function TicketCard({ chamado, onAtualizarStatus, onExcluir }) {
         <span>Solicitante: {chamado.solicitante}</span>
         <span>Criado em: {formatarData(chamado.criado_em)}</span>
       </div>
+      git add .
+
+git commit -m "ci: envia arquivo yml"
+
+git push origin quagmire77-patch-1
       <div className="ticket-controls">
         <label>
           Status
