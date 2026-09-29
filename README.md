@@ -21,7 +21,7 @@ O desenvolvimento segue uma Sprint simulada de 5 encontros, com entregas increme
 | Scrum Master (SM)  | João    |
 | Developer          | Rogério |
 | Developer          | Cássio  |
-| Developer          | Pedro   |
+| Developer          | Pedro Becker   |
 
 ##  Tecnologias
 
@@ -34,44 +34,58 @@ O desenvolvimento segue uma Sprint simulada de 5 encontros, com entregas increme
 ##  Como rodar o projeto
 
 ```bash
-# Clonar o repositório
+# 1. Clonar o repositório
 git clone https://github.com/jota404/Rojo-Capela-Desk.git
 
-# Entrar na pasta do projeto
-cd Rojo-Capela-Desk
+# 2. Entrar na pasta do projeto
+cd Rojo-Capela-Desk/rojo-capela-desk
 
-# Instalar as dependências
+# 3. Instalar as dependências
 npm install
 
-# Rodar em modo de desenvolvimento
+# 4. Iniciar o servidor backend
+
+Abra um terminal dentro da pasta rojo-capela-desk e execute:
+
+node server/server.js
+
+O servidor será iniciado na porta:
+
+http://localhost:3000
+
+Mantenha esse terminal aberto.
+
+# 5. Iniciar o frontend
+
+Abra um segundo terminal e entre novamente na pasta da aplicação:
+
+cd Rojo-Capela-Desk/rojo-capela-desk
+
+Execute:
+
 npm run dev
-```
 
-O projeto será disponibilizado, por padrão, em:
+O Vite iniciará o frontend, normalmente em:
 
-```text
 http://localhost:5173
+
+Caso a porta 5173 esteja ocupada, o Vite poderá utilizar outra porta, como 5174.
+
 ```
 
-##  Status Report — Aula 2
+##  Status Report
 
-**Foco:** Desenvolvimento do MVP
+### O que foi entregue/codificado?
 
-### 1. O que foi entregue/codificado hoje?
-
-Durante a segunda aula, a equipe iniciou o desenvolvimento do MVP do MiniDesk, passando da etapa de planejamento e configuração para a implementação do fluxo principal do sistema.
-
-Foram desenvolvidas as funcionalidades relacionadas ao cadastro e à consulta de chamados, permitindo registrar novas solicitações de suporte e visualizar os chamados existentes.
-
-Também foi iniciado o desenvolvimento da interface principal do sistema, organizando as informações dos chamados de forma que o usuário consiga acompanhar suas solicitações.
+Durante o desenvolvimento, foram implementadas as principais funcionalidades do sistema, incluindo cadastro, consulta, filtragem, atualização de status e exclusão de chamados. Também foram concluídas a integração entre frontend e backend local, persistência dos dados, organização do código e configuração do fluxo de versionamento e integração contínua. O projeto encontra-se finalizado e pronto para execução.
 
 Além do desenvolvimento das funcionalidades, a equipe continuou utilizando o GitHub para integração do código e organização das tarefas por meio do quadro Kanban.
 
 ### 2. Status no Kanban e WIP
 
-* **Etapa atual:** Desenvolvimento
-* **Foco da Sprint:** Desenvolvimento do MVP
-* **Funcionalidades trabalhadas:** Cadastro e listagem de chamados
+* **Etapa atual:** Finalizado
+* **Foco da Sprint:** Ajustes finais
+* **Funcionalidades trabalhadas:** Verificação de funcionalidades
 * **Itens em desenvolvimento:** Conforme organização do quadro Kanban da equipe
 * **WIP respeitado:** Sim
 
@@ -85,14 +99,6 @@ Durante o desenvolvimento, foram realizadas as configurações necessárias para
 
 Os problemas encontrados durante a configuração foram tratados pela equipe para permitir a continuidade do desenvolvimento.
 
-### 4. Foco da próxima aula
-
-As próximas prioridades da equipe são:
-
-1. Implementar a alteração de status dos chamados.
-2. Continuar a integração das funcionalidades desenvolvidas.
-3. Criar e executar testes automatizados para as funcionalidades do sistema.
-
 ##  Gestão do projeto
 
 * **Repositório:** https://github.com/jota404/Rojo-Capela-Desk
@@ -105,13 +111,11 @@ O trabalho é organizado utilizando o Kanban, mantendo as tarefas visíveis e ac
 | Aula   | Foco                    | Status                |
 | ------ | ----------------------- | --------------------- |
 | Aula 1 | Planejamento & Setup    |  Concluída           |
-| Aula 2 | Desenvolvimento MVP     |  Em desenvolvimento |
-| Aula 3 | Integração & Adaptação  |  Pendente            |
-| Aula 4 | Hardening & CI/CD       |  Pendente            |
-| Aula 5 | Entrega & Retrospectiva |  Pendente            |
+| Aula 2 | Desenvolvimento MVP     |  Concluída           |
+| Aula 3 | Integração & Adaptação  |  Concluída           |
+| Aula 4 | Hardening & CI/CD       |  Concluída           |
+| Aula 5 | Entrega & Retrospectiva |  Concluída           |
 
 ##  Status atual
 
- **Em desenvolvimento — Aula 2: Desenvolvimento do MVP**
-
-O projeto já avançou da etapa de planejamento para a implementação das funcionalidades principais de cadastro e listagem de chamados.
+Finalizado
