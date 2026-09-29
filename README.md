@@ -18,7 +18,7 @@ O desenvolvimento segue uma Sprint simulada de 5 encontros, com entregas increme
 | Papel              | Nome    |
 | ------------------ | ------- |
 | Product Owner (PO) | Larissa |
-| Scrum Master (SM)  | João    |
+| Scrum Master (SM)  | João Vigne    |
 | Developer          | Rogério |
 | Developer          | Cássio  |
 | Developer          | Pedro Becker   |
